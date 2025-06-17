@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>画像一覧</title>
+</head>
+<body>
+  <h1>投稿された画像一覧</h1>
+  <a href="/">← 戻る</a><br><br>
+
+  {% for image in images %}
+    <div style="margin-bottom: 30px;">
+      <img src="{{ url_for('static', filename='uploads/' + image) }}" width="200"><br>
+      
+      {% set meta = image + '.json' %}
+      {% if meta in metadata %}
+        <p>🗣 コメント：{{ metadata[meta]['comment'] }}</p>
+      {% endif %}
+    </div>
+  {% endfor %}
+</body>
+</html>
