@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>投稿一覧</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>投稿された画像一覧</h1>
+    <a href="{{ url_for('index') }}">← 戻る</a>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+        {% for image in images %}
+            <div style="background: white; padding: 10px; border-radius: 10px; width: 320px;">
+                <img src="{{ url_for('static', filename='uploads/' + image) }}">
+                {% set meta = image + '.json' %}
+                {% if meta in metadata %}
+                    <p>🗣 コメント：{{ metadata[meta]['comment'] }}</p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
