@@ -1,0 +1,44 @@
+
+body {
+  font-family: 'Helvetica', sans-serif;
+  margin: 2em;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+h1 {
+  color: #0c5975;
+}
+
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+  width: 400px;
+}
+
+input[type="text"],
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: #0c5975;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+img {
+  max-width: 300px;
+  margin-bottom: 0.5em;
+  border-radius: 5px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
